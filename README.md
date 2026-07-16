@@ -19,12 +19,12 @@ answer key. Pick an operation, choose the difficulty, and print or save a PDF.
 | Version | Where | Run it |
 | --- | --- | --- |
 | **Web** (this demo) | `index.html`, `app.js`, `styles.css` | Open `index.html`, or visit the live demo |
-| **Desktop** (original) | [`python/`](python/) | `python python/math_worksheets.py` |
+| **Desktop** (original) | [`python/math_worksheets.py`](python/math_worksheets.py) | `python python/math_worksheets.py` |
 
 The web app is a faithful browser port of the original Python/Tkinter desktop
-tool I wrote in 2022 — same number ranges, the same subtraction swap that keeps
-answers non-negative, the same division-with-remainder, and the same algebra
-equation generator and solver.
+tool — same number ranges, the same subtraction swap that keeps answers
+non-negative, the same division-with-remainder, and the same algebra equation
+generator and solver.
 
 ### Running the desktop version
 
