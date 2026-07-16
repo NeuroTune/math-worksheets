@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Math Worksheets — Generator</title>
+  <meta name="description" content="Generate printable math worksheets (addition, subtraction, multiplication, division, algebra) with an answer key — in your browser." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- jsPDF for one-click PDF download; the app also works with Print / Save as PDF if this fails to load. -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar no-print">
+    <h1>Math Worksheets</h1>
+    <p class="tag">Pick an operation, choose the difficulty, and generate a printable worksheet with an answer key.</p>
+  </header>
+
+  <main>
+    <section class="controls no-print" aria-label="Worksheet options">
+      <div class="field">
+        <label for="operation">Operation</label>
+        <select id="operation">
+          <option value="">Select…</option>
+          <option>Addition</option>
+          <option>Subtraction</option>
+          <option>Multiplication</option>
+          <option>Division</option>
+          <option>Algebra</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="digits">Digits</label>
+        <select id="digits">
+          <option value="">Select…</option>
+          <option value="1">1 digit</option>
+          <option value="2">2 digits</option>
+          <option value="3">3 digits</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="questions">Questions</label>
+        <select id="questions">
+          <option value="">Select…</option>
+          <!-- 1..18 injected by app.js -->
+        </select>
+      </div>
+
+      <div class="actions">
+        <button id="generate" class="btn btn-primary">Generate</button>
+        <button id="download" class="btn">Download PDF</button>
+        <button id="print" class="btn btn-ghost">Print / Save as PDF</button>
+      </div>
+      <p id="status" class="status" role="status"></p>
+    </section>
+
+    <section id="output" class="output" hidden>
+      <article id="worksheet" class="worksheet" style="--cols:1">
+        <div class="sheet-head">
+          <h2>MATH WORKSHEETS</h2>
+          <h3 id="sheet-title"></h3>
+          <div class="namebar">
+            <span>Name: ______________________</span>
+            <span>Date: ____________</span>
+          </div>
+        </div>
+        <div id="problem-grid" class="problem-grid"></div>
+      </article>
+
+      <aside class="answers">
+        <h3>Answer Key</h3>
+        <ol id="answer-list" class="answer-list"></ol>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer no-print">
+    <p>Built by <a href="https://github.com/NeuroTune" rel="noopener">Tuba Aksoy</a> ·
+    Browser port of a Python/tkinter tool · <a href="python/math_worksheets.py">original source</a></p>
+  </footer>
+</body>
+</html>

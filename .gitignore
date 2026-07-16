@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.Rhistory
+
+# Generated worksheets
+Math_Practice.pdf
