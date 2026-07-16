@@ -7,7 +7,6 @@ answer key. Pick an operation, choose the difficulty, and print or save a PDF.
 
 **▶ Live demo:** https://neurotune.github.io/math-worksheets/
 
-js code was created with the help of claude code from the original project (2023). 
 
 ## What it does
 
